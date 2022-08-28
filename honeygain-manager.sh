@@ -144,9 +144,9 @@ EOF
 			# If the container exists and the information was changed in the
 			# configuration, then remove the old container and create a new one.
 
-			local current_email=$(docker inspect -f '{{ json .Args }}' $CONTAINER_NAME | jq '.[2]')
-			local current_password=$(docker inspect -f '{{ json .Args }}' $CONTAINER_NAME | jq '.[4]')
-			local current_device_name=$(docker inspect -f '{{ json .Args }}' $CONTAINER_NAME | jq '.[-1]')
+			local current_email=$(docker inspect -f '{{ json .Args }}' $CONTAINER_NAME | jq '.[2]' | cut -d'"' -f2)
+			local current_password=$(docker inspect -f '{{ json .Args }}' $CONTAINER_NAME | jq '.[4]' | cut -d'"' -f2)
+			local current_device_name=$(docker inspect -f '{{ json .Args }}' $CONTAINER_NAME | jq '.[-1]' | cut -d'"' -f2)
 
 			if [[ $current_email != $EMAIL ]] ||
 			  [[ $current_password != $PASSWORD ]] ||
