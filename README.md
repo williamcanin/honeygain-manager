@@ -44,12 +44,10 @@ sudo nano ~/.config/honeygain-manager.conf
 2 - Depois de informar seus dados no arquivo de configuração, execute o comando abaixo para criar o container com as informações:
 
 ```
-# honeygain-manager create
+honeygain-manager create
 ```
 
-> Nota 1: Este comando tem que ser com super usuário (root)
-
-> Nota 2: Sempre que você mudar as informações no arquivo "~/.config/honeygain-manager.conf", execute este comando acima.
+> Nota: Sempre que você mudar as informações no arquivo "~/.config/honeygain-manager.conf", execute este comando acima.
 
 3 - Agora, inicie o serviço do "Honeygain" manualmente:
 
