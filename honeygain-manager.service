@@ -1,0 +1,16 @@
+[Unit]
+Description="Honeygain Manager - Package for Arch Linux that creates a service for Honeygain"
+After=bar.service
+After=network.target
+After=syslog.target
+After=docker.service
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/usr/bin/honeygain-manager start
+ExecReload=/usr/bin/honeygain-manager restart
+ExecStop=/usr/bin/honeygain-manager stop
+
+[Install]
+WantedBy=multi-user.target
