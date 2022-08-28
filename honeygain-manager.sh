@@ -164,6 +164,8 @@ EOF
         -email $EMAIL -pass $PASSWORD -device $DEVICE_NAME
         echo ">>> Honeygain NEW Container Created!"
 
+      else
+        echo ">>> No need to create a new container. :)"
 			fi
 
 		fi
