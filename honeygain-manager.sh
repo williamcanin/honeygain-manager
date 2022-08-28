@@ -85,7 +85,7 @@ EOF
 	## Function to check if the service (via the PID) of Honeygain is running.
 	function honeygain_status () {
 		local retval="$(docker ps -f name=$CONTAINER_NAME | grep -w $CONTAINER_NAME)"
-		# local retval="$(docker inspect -f '{{ json .State.Pid }}' $CONTAINER_NAME)"
+		# local retval="$(docker inspect -f '{{ json .State.Running }}' $CONTAINER_NAME)"
 		echo "$retval"
 	}
 
@@ -170,6 +170,7 @@ EOF
 		fi
 	}
 
+
 ### Reaload daemon
   systemctl --user daemon-reload
 
@@ -188,6 +189,13 @@ EOF
 		stop)
 			honeygain_stop_server
 		;;
+    status)
+      if [[ -z $(honeygain_status) ]]; then
+        echo "Status: Stopped"
+      else
+        echo "Status: Running"
+      fi
+    ;;
     version)
       echo "$APPNAME: $APPVERSION"
     ;;
@@ -195,6 +203,6 @@ EOF
       echo "$CREDITS"
 
     ;;
-		*) echo "Usage: $0 {create|start|restart|stop|version}"
+		*) echo "Usage: $0 {create|start|restart|stop|status|version}"
 		;;
 	esac
