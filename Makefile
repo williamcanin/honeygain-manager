@@ -1,6 +1,3 @@
-PREFIX = /usr/local
-BASEDIR = .
-
 uninstall:
 	@sudo pacman -Rdc honeygain-manager
 
