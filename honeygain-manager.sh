@@ -117,6 +117,7 @@ EOF
 
 		if [[ ! -z $(honeygain_status) ]]; then
 			docker stop $CONTAINER_NAME
+      echo ">>> Honeygain service stopped successfully!"
 		fi
 
 		# This command is for restarting Docker.
