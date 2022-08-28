@@ -106,7 +106,6 @@ EOF
   ## Function to start the Honeygain service
 	function honeygain_start_server () {
 
-		# If the PID is equal to 0, it means that the service is not running.
 		if [[ -z $(honeygain_status) ]]; then
 			docker start $CONTAINER_NAME
 			docker attach $CONTAINER_NAME
@@ -116,9 +115,8 @@ EOF
 	## Function to stop Honeygain service
 	function honeygain_stop_server () {
 
-		# If the PID is different from 0, it means the service is running.
 		if [[ ! -z $(honeygain_status) ]]; then
-			docker kill $CONTAINER_NAME
+			docker stop $CONTAINER_NAME
 		fi
 
 		# This command is for restarting Docker.
