@@ -84,8 +84,8 @@ EOF
 
 	## Function to check if the service (via the PID) of Honeygain is running.
 	function honeygain_status () {
-		# local retval="$(docker container ls -a -f name=$CONTAINER_NAME | grep -w $CONTAINER_NAME)"
-		local retval="$(docker inspect -f '{{ json .State.Pid }}' $CONTAINER_NAME)"
+		local retval="$(docker ps -f name=$CONTAINER_NAME | grep -w $CONTAINER_NAME)"
+		# local retval="$(docker inspect -f '{{ json .State.Pid }}' $CONTAINER_NAME)"
 		echo "$retval"
 	}
 
