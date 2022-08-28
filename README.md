@@ -34,7 +34,7 @@ sudo pacman -U honeygain-manager*.zst
 1 - Abra o arquivo de configuração em **~/.config/honeygain-manager.conf**:
 
 ```
-sudo nano ~/.config/honeygain-manager.conf
+nano ~/.config/honeygain-manager.conf
 ```
 
 * Em **EMAIL**, coloque o e-mail de login da sua conta do "Honeygain".
@@ -52,29 +52,29 @@ honeygain-manager create
 3 - Agora, inicie o serviço do "Honeygain" manualmente:
 
 ```
-sudo systemctl --user start honeygain-manager
+systemctl --user start honeygain-manager
 ```
 
 4 - Para iniciar o serviço do "Honeygain" durante o boot, faça:
 
 ```
-sudo systemctl --user enable honeygain-manager
+systemctl --user enable honeygain-manager
 ```
 
 5 - Caso queira parar o serviço do "Honeygain":
 
 ```
-sudo systemctl --user stop honeygain-manager
+systemctl --user stop honeygain-manager
 ```
 
 6 - Reiniciar o serviço do "Honeygain", execute este comando:
 
 ```
-sudo systemctl --user restart honeygain-manager
+systemctl --user restart honeygain-manager
 ```
 
 7 - Desabilitar o serviço do "Honeygain" no boot da máquina, faça:
 
 ```
-sudo systemctl --user disable honeygain-manager
+systemctl --user disable honeygain-manager
 ```
