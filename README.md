@@ -52,29 +52,29 @@ honeygain-manager create
 3 - Agora, inicie o serviço do "Honeygain" manualmente:
 
 ```
-sudo systemctl --user start honeygain-manager.service
+sudo systemctl --user start honeygain-manager
 ```
 
 4 - Para iniciar o serviço do "Honeygain" durante o boot, faça:
 
 ```
-sudo systemctl --user enable honeygain-manager.service
+sudo systemctl --user enable honeygain-manager
 ```
 
 5 - Caso queira parar o serviço do "Honeygain":
 
 ```
-sudo systemctl --user stop honeygain-manager.service
+sudo systemctl --user stop honeygain-manager
 ```
 
 6 - Reiniciar o serviço do "Honeygain", execute este comando:
 
 ```
-sudo systemctl --user restart honeygain-manager.service
+sudo systemctl --user restart honeygain-manager
 ```
 
 7 - Desabilitar o serviço do "Honeygain" no boot da máquina, faça:
 
 ```
-sudo systemctl --user disable honeygain-manager.service
+sudo systemctl --user disable honeygain-manager
 ```
