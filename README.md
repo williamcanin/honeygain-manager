@@ -75,3 +75,9 @@ systemctl --user restart honeygain-manager
 ```
 systemctl --user disable honeygain-manager
 ```
+
+# Possíveis problemas
+
+Caso não consiga iniciar o serviço do Honeygain com o comando `systemctl --user start honeygain-manager`,
+uma opção é reiniciar o serviço do **Docker** com o comando `sudo systemctl restart docker`.
+Depois de reiniciar o serviço do Docker, tente novamente reiniciar o serviço do Honeygain.
