@@ -18,17 +18,14 @@ git clone --single-branch https://github.com/williamcanin/honeygain-manager.git
 cd honeygain-manager
 ```
 
-2 - Compile o "Honeygain Manager" no **Arch Linux**:
+2 - Instale o "Honeygain Manager" no **Arch Linux**:
 
 ```
-makepkg -fc
+make install
 ```
 
-3 - Instale o "Honeygain Manager" no **Arch Linux**:
+> Nota: Você terá que ter permissão de sudo
 
-```
-sudo pacman -U honeygain-manager*.zst
-```
 # Usando
 
 1 - Abra o arquivo de configuração em **~/.config/honeygain-manager.conf**:
