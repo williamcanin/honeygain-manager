@@ -1,8 +1,6 @@
 [Unit]
 Description="Honeygain Manager - Package for Arch Linux that creates a service for Honeygain"
-After=bar.service
 After=network.target
-After=syslog.target
 After=docker.service
 
 [Service]
