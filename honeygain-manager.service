@@ -11,4 +11,4 @@ ExecReload=/usr/bin/honeygain-manager restart
 ExecStop=/usr/bin/honeygain-manager stop
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
