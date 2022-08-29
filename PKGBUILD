@@ -18,6 +18,6 @@ package() {
   install -Dm 755 "${srcdir}"/honeygain-manager.sh "${pkgdir}"/usr/bin/honeygain-manager
   chmod +x "${pkgdir}"/usr/bin/honeygain-manager
 
-  install -Dm 644 "${srcdir}"/honeygain-manager.service -t "${pkgdir}"$HOME/.config/systemd/user
+  install -Dm 644 "${srcdir}"/honeygain-manager.service -t "${pkgdir}"/usr/lib/systemd/user
 
 }
