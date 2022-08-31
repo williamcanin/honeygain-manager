@@ -28,6 +28,8 @@ make install
 
 # Usando
 
+> Nota: Para o "**Honeygain Manager**" funcionar, o serviço do **Docker** tem que está ativo.
+
 1 - Abra o arquivo de configuração em **~/.config/honeygain-manager.conf**:
 
 ```
@@ -57,6 +59,9 @@ systemctl --user start honeygain-manager
 ```
 systemctl --user enable honeygain-manager
 ```
+
+> Nota: Para essa opção funcionar, o serviço do "**Docker**" tem que estar iniciado durante o boot da máquina.
+
 
 5 - Caso queira parar o serviço do "Honeygain":
 
